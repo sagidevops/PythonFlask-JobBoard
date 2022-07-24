@@ -1,6 +1,6 @@
 node() {
     stage('checkout code') {
-       checkout([$class: 'GitSCM', branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'git@github.com:lidorg-dev/PythonFlask-JobBoard.git']]])
+       checkout([$class: 'GitSCM', branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'git@github.com:sagidevops/PythonFlask-JobBoard.git']]])
    }
    stage('build') {
        sh '''docker build -t flask:latest . '''
